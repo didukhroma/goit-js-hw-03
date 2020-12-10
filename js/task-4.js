@@ -3,6 +3,11 @@
 //     передаваемого в функцию, имеет вид "имя": "зарплата".
 
 const countTotalSalary = function (employees) {
+  let summ = 0;
+  for (const salary in employees) {
+    summ += employees[salary];
+  }
+  return summ;
   // твой код
 };
 
