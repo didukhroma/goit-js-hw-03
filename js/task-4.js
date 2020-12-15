@@ -2,15 +2,24 @@
 // Функция считает общую сумму запрплаты работников и возращает ее.Каждое поле объекта,
 //     передаваемого в функцию, имеет вид "имя": "зарплата".
 
+// const countTotalSalary = function (employees) {
+//   let summ = 0;
+//   for (const salary in employees) {
+//     summ += employees[salary];
+//   }
+//   return summ;
+//   // твой код
+// };
+
 const countTotalSalary = function (employees) {
-  let summ = 0;
-  for (const salary in employees) {
-    summ += employees[salary];
+  const arrEmployees = Object.values(employees);
+  let sum = 0;
+  for (const salary of arrEmployees) {
+    sum += salary;
   }
-  return summ;
+  return sum;
   // твой код
 };
-
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
